@@ -151,7 +151,7 @@ python train.py --img 640 --batch 2 --epochs 60 --data CustomDataset_licence.yam
 ```
 
 </details>
-
+<details>
 <summary>Validation</summary>
 
 Validate a model's accuracy on the our dataset's val or test splits
