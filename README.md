@@ -66,7 +66,7 @@ Clone repo and install [requirements.txt](https://github.com/ultralytics/yolov5/
 [**PyTorch>=1.7**](https://pytorch.org/get-started/locally/).
 
 ```bash
-git clone https://github.com/ultralytics/yolov5  # clone
+git clone https://github.com/ImanGoudarzvand/yolov5  # clone
 cd yolov5
 pip install -r requirements.txt  # install
 ```
@@ -115,7 +115,7 @@ python detect.py --source 0  # webcam
 In our case:
 
 ```bash
-python detect.py --weights pretrained_weights.pt --img 640 --conf 0.25 --source ./test # image test folder
+python detect.py --weights pretrained_weights.pt --img 640 --conf 0.25 --source ../test # image test folder
 ```
 
 Inference results are under runs/detect folder
@@ -141,10 +141,13 @@ python train.py --data coco.yaml --cfg yolov5n.yaml --weights '' --batch-size 12
                                        yolov5l                                24
                                        yolov5x                                16                            
 ```
-In our case:
-
+In our case, 
+the dataset can be found [here](https://www.kaggle.com/datasets/andrewmvd/car-plate-detection)
+<div>
+download the dataset and put it in root path
+</div>
 ```bash
-python train.py --img 640 --batch 60 --epochs 3 --data --weights yolov5s.pt CustomDataset_licence.yaml  --cache
+python train.py --img 640 --batch 2 --epochs 60 --data CustomDataset_licence.yaml --weights yolov5s.pt --cache
                           
 ```
 
@@ -155,7 +158,7 @@ python train.py --img 640 --batch 60 --epochs 3 --data --weights yolov5s.pt Cust
 Validate a model's accuracy on the our dataset's val or test splits
 
 ```bash
-python val.py --data CustomDataset_licence.yaml --cfg yolov5n.yaml --weights pretrained_weights.pt --batch-size 16
+python val.py --data CustomDataset_licence.yaml --weights pretrained_weights.pt --batch-size 16
 
 ```
 
