@@ -143,9 +143,8 @@ python train.py --data coco.yaml --cfg yolov5n.yaml --weights '' --batch-size 12
 ```
 In our case, 
 the dataset can be found [here](https://www.kaggle.com/datasets/andrewmvd/car-plate-detection)
-<div>
-download the dataset and put it in root path
-</div>
+, download the dataset and put it in root path
+
 ```bash
 python train.py --img 640 --batch 2 --epochs 60 --data CustomDataset_licence.yaml --weights yolov5s.pt --cache
                           
